@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="header-image"></div>
+  <div class="activity-description">
+    <div class="title">
+      <div>{{ activity.title }}</div>
+      <div class="action"><button>click</button></div>
+    </div>
+    <div class="content">
+      <div class="current">
+        {{ activity.timeframes.daily.current + 'hrs' }}
+      </div>
+      <div class="previous">
+        Last day - {{ activity.timeframes.daily.previous + 'hrs' }}
+      </div>
+    </div>
+  </div>
+</div>

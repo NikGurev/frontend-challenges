@@ -1,0 +1,32 @@
+.card {
+  grid-row: span 2;
+  border-radius: 16px;
+  .user-info {
+
+    padding: 20px;
+    border-radius: 16px;
+    background-color: #3d3d7e;
+
+    .for {
+      font-size: 12px;
+    }
+
+    .username {
+      font-size: 32px;
+    }
+  }
+
+  .period {
+    display: flex;
+    padding: 20px;
+    border-radius: 16px;
+    .button {
+      color: blueviolet;
+
+      &:hover {
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
