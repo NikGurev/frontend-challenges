@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
     /*
     * Возвращает [{title: 'test', current: 0, previous: 0},...]
     * */
-    this.resetData();
+    // this.resetData();
 
     const subscription = this.service.selectedPeriodType$.subscribe(periodType => {
       this.periodType = periodType;
