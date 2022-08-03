@@ -20,7 +20,9 @@
 
       .period {
         flex-direction: column;
-        margin-top: 16px;
+        .button {
+          margin-top: 16px;
+        }
       }
     }
   }

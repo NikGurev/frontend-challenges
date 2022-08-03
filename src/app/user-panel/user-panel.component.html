@@ -4,8 +4,8 @@
     <div class="username">{{ userName }}</div>
   </div>
   <div class="period">
-    <div class="button">Daily</div>
-    <div class="button">Weekly</div>
-    <div class="button">Monthly</div>
+    <div class="button" (click)="onClick('daily')">Daily</div>
+    <div class="button" (click)="onClick('weekly')">Weekly</div>
+    <div class="button" (click)="onClick('monthly')">Monthly</div>
   </div>
 </div>

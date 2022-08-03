@@ -1,9 +1,9 @@
 
 <div class="grid-container">
-  <app-user-panel></app-user-panel>
+  <app-user-panel (periodChanged)="onPeriodChange($event)"></app-user-panel>
   <app-activity-card
     [activity]="activity"
-    *ngFor="let activity of activitiyList"
+    *ngFor="let activity of selectedActivitiesList"
   >
   </app-activity-card>
 </div>
