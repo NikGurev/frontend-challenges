@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AppService} from "../app.service";
 
 export type PeriodType = 'daily' | 'weekly' | 'monthly';
 
@@ -11,14 +12,15 @@ export class UserPanelComponent implements OnInit {
 
   userName = 'Jeremy Robson';
 
-  @Output() periodChanged = new EventEmitter<PeriodType>();
+  // @Output() periodChanged = new EventEmitter<PeriodType>();
 
-  constructor() { }
+  constructor(private service: AppService) { }
 
   ngOnInit(): void {
   }
 
   onClick(periodType: PeriodType): void {
-    this.periodChanged.emit(periodType);
+    this.service.changePeriodType(periodType);
+    // this.periodChanged.emit(periodType);
   }
 }
