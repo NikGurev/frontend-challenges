@@ -1,10 +1,20 @@
 
-<div class="grid-container">
-<!--  <app-user-panel (periodChanged)="onPeriodChange($event)"></app-user-panel>-->
-  <app-user-panel></app-user-panel>
-  <app-activity-card
-    [activity]="activity"
-    *ngFor="let activity of selectedActivitiesList"
-  >
-  </app-activity-card>
+<div class="container">
+    <nav>
+        <a href="activities">1</a>
+        <a href="todo">2</a>
+        <a href="third">3</a>
+        <a href="fourth">4</a>
+    </nav>
+    <router-outlet></router-outlet>
+    <!--<div class="grid-container">
+        &lt;!&ndash;  <app-user-panel (periodChanged)="onPeriodChange($event)"></app-user-panel>&ndash;&gt;
+        <app-user-panel></app-user-panel>
+        <app-activity-card
+                [activity]="activity"
+                *ngFor="let activity of selectedActivitiesList"
+        >
+        </app-activity-card>
+    </div>-->
 </div>
+

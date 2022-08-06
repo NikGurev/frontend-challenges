@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
 
-import { AppComponent } from './app.component';
-import { PostComponent } from './post/post.component';
-import {RouterModule, Routes} from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ActivitiesComponent } from './activities/activities.component';
+import { TodoComponent } from './todo/todo.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  { path: 'tabs', loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsModule) },
-  { path: 'templates', loadChildren: () => import('./templates/templates.module').then(m => m.TemplatesModule) }
+    { path: '', component: DashboardComponent,
+      children: [
+        { path: 'activities', component: ActivitiesComponent },
+        { path: 'todo', component: TodoComponent },
+      ]
+    },
+    { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

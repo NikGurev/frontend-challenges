@@ -1,0 +1,29 @@
+
+.container {
+  display: flex;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    color: white;
+    background-color: #592a86;
+    padding: 16px;
+    border-radius: 16px;
+
+    a {
+      font-size: 30px;
+      color: #fff;
+      text-decoration: none;
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .grid-container {
+    font-family: Montserrat, sans-serif;
+    padding: 8px;
+  }
+}
+
+
