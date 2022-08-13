@@ -17,6 +17,10 @@
       text-decoration: none;
       padding: 20px;
       text-align: center;
+
+      &.active {
+        color: red;
+      }
     }
   }
 

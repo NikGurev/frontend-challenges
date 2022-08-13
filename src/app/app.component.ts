@@ -3,6 +3,7 @@ import {activities} from "./data";
 import {PeriodType} from "./user-panel/user-panel.component";
 import {AppService} from "./app.service";
 import {Subscription} from "rxjs";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   subscription?: Subscription;
 
-  constructor(private service: AppService) {
+  constructor(
+      private service: AppService,
+      private router: Router
+  ) {
     this.activitiyList = [];
     this.periodType = "daily";
   }
@@ -52,5 +56,11 @@ export class AppComponent implements OnInit, OnDestroy {
     this.selectedActivitiesList = this.activitiyList.map((activity: any) => {
       return {title: activity.title, ...activity.timeframes[this.periodType]}
     });
+  }
+
+
+  onTodoClick() {
+    console.log('log');
+    this.router.navigate(['todo']);
   }
 }

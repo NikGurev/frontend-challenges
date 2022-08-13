@@ -5,14 +5,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { TodoComponent } from './todo/todo.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TodoCardComponent } from './todo-card/todo-card.component';
 
 const routes: Routes = [
-    { path: '', component: DashboardComponent,
-      children: [
-        { path: 'activities', component: ActivitiesComponent },
-        { path: 'todo', component: TodoComponent },
-      ]
-    },
+    { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
     { path: '**', component: NotFoundComponent }
 ];
 

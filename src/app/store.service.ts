@@ -39,5 +39,7 @@ export class StoreService {
     return this.http.get('https://jsonplaceholder.typicode.com/todos');
   }
 
-
+  getTodoById(id: string) {
+    return this.http.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
+  }
 }
