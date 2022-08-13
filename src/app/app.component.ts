@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {activities} from "./data";
 import {PeriodType} from "./user-panel/user-panel.component";
 import {AppService} from "./app.service";
 import {Subscription} from "rxjs";
 import { Router } from '@angular/router';
+import { Store } from './store.service';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +22,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
       private service: AppService,
-      private router: Router
+      private router: Router,
+      private store: Store
   ) {
     this.activitiyList = [];
     this.periodType = "daily";
